@@ -1,2 +1,2 @@
 # parallax
-Simple &amp; efficient parallax effect written in vanilla js
+Simple &amp; efficient parallax effect written in pure CSS.

@@ -1,0 +1,128 @@
+@supports (perspective: 1px) {
+	body {
+		transform: translateZ(0);
+	}
+
+	.jl-parallax {
+		scroll-behavior: smooth;
+		perspective: 100px;
+		-webkit-perspective: 100px;
+		height: 100%;
+		overflow-x: hidden;
+		overflow-y: auto;
+		perspective-origin: calc(50% - 8.5px) 100%;
+		-webkit-perspective-origin-x: calc(50% - 8.5px);
+		-webkit-perspective-origin-y: 100%;
+		pointer-events: all;
+	}
+
+	.jl-parallax-h {
+		overflow-y: hidden;
+		overflow-x: auto;
+		perspective-origin: 100% calc(50% - 8.5px);
+		-webkit-perspective-origin-x: 100%;
+		-webkit-perspective-origin-y: calc(50% - 8.5px);
+	  	white-space: nowrap;
+	}
+
+	.jl-parallax.hide-scroll {
+		margin-right: -17px;
+	}
+
+	.jl-parallax > .jl-parallax-group {
+	    position: relative;
+	    display: block;
+	    height: 100%;
+	    width: 100%;
+	    -webkit-transform-style: preserve-3d;
+	    transform-style: preserve-3d;
+	}
+
+	.jl-parallax-h > .jl-parallax-group {
+	    display: inline-block
+	}
+
+	.jl-parallax-layer {
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    right: 0;
+	    bottom: 0;
+	    pointer-events: none;
+	}
+
+	.jl-parallax > .jl-parallax-layer,
+	.jl-parallax-group > .jl-parallax-layer {
+	    -webkit-transform-origin-x: 50%;
+	    -webkit-transform-origin-y: 100%;
+	    transform-origin: 50% 100%;
+	}
+
+	.jl-parallax-h > .jl-parallax-layer,
+	.jl-parallax-h > .jl-parallax-group > .jl-parallax-layer {
+	    -webkit-transform-origin-x: 100%;
+	    -webkit-transform-origin-y: 50%;
+	    transform-origin: 100% 50%;
+	}
+
+	.jl-parallax-layer, .jl-parallax-layer-3 {
+	    -webkit-transform: translateZ(20px) scale(.8);
+	    transform: translateZ(20px) scale(.8);
+	    z-index: 3;
+	}
+
+	.jl-parallax-layer-1 {
+		-webkit-transform: translateZ(50px) scale(.5);
+		transform: translateZ(50px) scale(.5);
+	    z-index: 1;
+	}
+
+	.jl-parallax-layer-2 {
+		-webkit-transform: translateZ(35px) scale(.65);
+		transform: translateZ(35px) scale(.65);
+	    z-index: 2;
+	}
+
+	.jl-parallax-layer-4 {
+		-webkit-transform: translateZ(0);
+		transform: translateZ(0);
+	    z-index: 4;
+	}	
+
+	.jl-parallax-layer-5 {
+	    -webkit-transform: translateZ(-40px) scale(1.4);
+	    transform: translateZ(-40px) scale(1.4);
+	    z-index: 5;
+	}
+
+	.jl-parallax-layer-6 {
+	    -webkit-transform: translateZ(-60px) scale(1.6);
+	    transform: translateZ(-60px) scale(1.6);
+	    z-index: 6;
+	}
+
+	.jl-parallax-h > .jl-parallax-slide {
+	  display: inline-block;
+	  white-space: normal;
+	}
+
+	.jl-parallax-group {
+		z-index: 10;
+	}
+
+	.jl-parallax-group + .jl-parallax-group {
+		z-index: 9;
+	}
+
+	.jl-parallax-group + .jl-parallax-group + .jl-parallax-group {
+		z-index: 8;
+	}
+
+	.jl-parallax-group + .jl-parallax-group + .jl-parallax-group + .jl-parallax-group {
+		z-index: 7;
+	}
+
+	.jl-parallax-group + .jl-parallax-group + .jl-parallax-group + .jl-parallax-group + .jl-parallax-group {
+		z-index: 6;
+	}
+}

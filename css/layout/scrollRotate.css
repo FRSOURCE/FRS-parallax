@@ -1,0 +1,42 @@
+.scroll-rotate-90 {
+	margin-left: -17px;
+    width: 100vh;
+    height: 100vw;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    transform: rotate(-90deg) translateY(-100vh);
+    transform-origin: right top;
+    pointer-events: all;
+}
+
+.scroll-rotate-90::before {
+    content: '';
+    display: block;
+    margin-left: -17px;
+    height: 100vh;
+}
+
+.scroll-rotate-90.hide-scroll {
+    margin-top: -17px;
+    width: calc(100vh + 17px);
+}
+
+.scroll-rotate-90 > .scroll-rotate-content {
+	display: block;
+    margin-top: 100vw;
+	height: 100vh;
+    transform: rotate(90deg);
+    transform-origin: right top;
+    white-space: nowrap;
+}
+
+.scroll-rotate-content > .scroll-rotate-item {
+	display: inline-block;
+	height: 100%;
+    width: 100vw;
+    vertical-align: middle;
+    white-space: normal;
+    -webkit-transform-origin-x: 100%;
+    -webkit-transform-origin-y: 50%;
+    transform-origin: 100% 50%;
+}
