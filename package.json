@@ -26,7 +26,7 @@
   "homepage": "https://github.com/FRSolutions/FRS-parallax#readme",
   "dependencies": {
     "parcel-bundler": "^1.7.1",
-    "puppeteer": "^1.3.0",
+    "puppeteer": "^1.13.0",
     "tape": "^4.9.0"
   }
 }
